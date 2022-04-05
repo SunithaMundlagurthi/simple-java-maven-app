@@ -2,10 +2,10 @@ pipeline {
     agent any  
     stages { 
         stage('Build') { 
-            steps { 
+           steps { 
 	       echo '1st stage'
-               mvn clean install
-            }
+               sh 'mvn -Dmaven.test.failure.ignore=true install'
+           }
         }
 	stage('Linux_Comand') {
 	    steps {
