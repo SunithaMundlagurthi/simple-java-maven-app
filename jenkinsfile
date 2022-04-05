@@ -10,7 +10,7 @@ pipeline {
 	stage('Linux_Command') {
 	    steps {
 		echo '2nd stage'
-                sh "mkdir /tmp/pipeline"
+                sh 'mkdir /tmp/pipeline1'
 	    }
 	}
     }
