@@ -10,16 +10,10 @@ pipeline {
                sh 'mvn clean install'
            }
         }
-	stage('Linux_Comand') {
+	stage('Deploy') {
 	    steps {
-		echo '2nd stage'
-                sh 'mkdir /tmp/pipeline2'
-	    }
-	}
- 	stage('Deploy') {
-	    steps {
-		echo "3rd stage"
-		sh 'touch /tmp/pipeline2/abc.txt'
+		echo "2nd stage"
+		sh 'mvn clean deploy'
 	    }
 	}
     }
