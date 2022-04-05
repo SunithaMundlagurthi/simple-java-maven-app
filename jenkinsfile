@@ -7,7 +7,7 @@ pipeline {
                echo 'This is a pipeline code' 
             }
         }
-	stage('Linux_Command') {
+	stage('Linux_Comand') {
 	    steps {
 		echo '2nd stage'
                 sh 'mkdir /tmp/pipeline1'
