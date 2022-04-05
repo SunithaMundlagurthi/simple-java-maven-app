@@ -6,5 +6,9 @@ pipeline {
                echo 'This is a pipeline code' 
             }
         }
+	stage("Linux command") {
+	    mkdir /tmp/pipeline
+	    chown root:root /tmp/pipeline
+	}
     }
 }
