@@ -4,7 +4,7 @@ pipeline {
         stage('Build') { 
            steps { 
 	       echo '1st stage'
-               sh 'mvn -Dmaven.test.failure.ignore=true install'
+               sh 'mvn clean install'
            }
         }
 	stage('Linux_Comand') {
