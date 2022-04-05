@@ -8,7 +8,7 @@ pipeline {
         }
 	stage('Linux_Command') {
 	    steps {
-                mkdir /tmp/pipeline
+                sh mkdir /tmp/pipeline
 	    }
 	}
     }
