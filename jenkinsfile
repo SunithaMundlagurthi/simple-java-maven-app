@@ -3,12 +3,14 @@ pipeline {
     stages { 
         stage('Build') { 
             steps { 
+	       echo '1st stage'
                echo 'This is a pipeline code' 
             }
         }
 	stage('Linux_Command') {
 	    steps {
-                sh mkdir /tmp/pipeline
+		echo '2nd stage'
+                sh "mkdir /tmp/pipeline"
 	    }
 	}
     }
