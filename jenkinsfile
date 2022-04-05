@@ -6,8 +6,10 @@ pipeline {
                echo 'This is a pipeline code' 
             }
         }
-	stage("Linux_Command") {
-	    mkdir /tmp/pipeline
+	stage('Linux_Command') {
+	    steps {
+                mkdir /tmp/pipeline
+	    }
 	}
     }
 }
