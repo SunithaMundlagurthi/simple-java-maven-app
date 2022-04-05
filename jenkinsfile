@@ -4,13 +4,19 @@ pipeline {
         stage('Build') { 
             steps { 
 	       echo '1st stage'
-               echo 'This is a pipeline code' 
+               mvn clean install
             }
         }
 	stage('Linux_Comand') {
 	    steps {
 		echo '2nd stage'
-                sh 'mkdir /tmp/pipeline1'
+                sh 'mkdir /tmp/pipeline2'
+	    }
+	}
+ 	stage('Deploy') {
+	    steps {
+		echo "3rd stage"
+		sh 'touch /tmp/pipeline2/abc.txt'
 	    }
 	}
     }
